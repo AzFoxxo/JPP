@@ -73,5 +73,6 @@ $$;
 
 Each block is run one after another and then the output inserted.
 
-
 ## QOL Changes
+
+- alias string to String globally.
