@@ -44,5 +44,34 @@ public class Main {
 
 ## Preprocessor Support
 
+The preprocessor utilises Python (3.x) to perform compile evaluation of the code as well as some built in directives which use `#` and terminate with `;`.
+
+### Built-in Directives
+
+- `alias <alias> <substitution>;` - replaces the <alias> with the <substitution> (substitution is defined as anything before the termination`;`)
+- `include <relative_path_to_file_POSIX_style>` - Copy-paste file contents into this file at the given line (if the new file contains Java++, it will run the preprocessing stop on that file before insertion)
+
+### Python Runtime Evaluation
+
+You can use `%%` to begin a Python context window, anything in `%%` before the terminating `%%;` will be treated as Python code.
+
+So platform specific code may use:
+```java
+%%
+import platform
+
+if platform.system() == "Linux":
+    %%;
+        System.out.println("You're using Linux!");
+    %%
+else:
+    %%;
+    System.out.println("You're not using Linux!");
+    %%
+$$;
+```
+
+Each block is run one after another and then the output inserted.
+
 
 ## QOL Changes
