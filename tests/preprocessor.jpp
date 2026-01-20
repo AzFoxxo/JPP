@@ -9,4 +9,4 @@ else:
     %%;
     System.out.println("You're not using Linux!");
     %%
-$$;
+%%;

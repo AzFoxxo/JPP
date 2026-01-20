@@ -69,7 +69,7 @@ else:
     %%;
     System.out.println("You're not using Linux!");
     %%
-$$;
+%%;
 ```
 
 Each block is run one after another and then the output inserted.
