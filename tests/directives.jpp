@@ -1,0 +1,4 @@
+#alias fox FoxActorClassName;
+#alias fox_new new foxActorClassName;
+
+#include string.jpp;

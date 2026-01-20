@@ -1,0 +1,12 @@
+%%
+import platform
+
+if platform.system() == "Linux":
+    %%;
+        System.out.println("You're using Linux!");
+    %%
+else:
+    %%;
+    System.out.println("You're not using Linux!");
+    %%
+$$;
